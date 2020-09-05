@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+  <RadioGroup
+      android:id="@+id/rg"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintStart_toEndOf="parent"
+      app:layout_constraintEnd_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+      <RadioButton
+          android:tag="male"
+          android:text="male"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+      <RadioButton
+          android:tag="female"
+          android:text="female"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+      <RadioButton
+          android:tag="other"
+          android:text="other"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+  </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg">
+        <CheckBox
+            android:tag="Android"
+            android:text="Android"
+            android:id="@+id/cb_android"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="onCheckboxClicked"
+            />
+        <CheckBox
+            android:tag="ios"
+            android:text="ios"
+            android:id="@+id/cb_ios"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="onCheckboxClicked"
+          />
+        <CheckBox
+            android:tag="java"
+            android:text="java"
+            android:id="@+id/cb_java"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="onCheckboxClicked"
+          />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <Button
+            android:onClick="submit"
+            android:id="@+id/submit"
+            android:text="submit"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:onClick="reset"
+            android:id="@+id/reset"
+            android:text="reset"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
