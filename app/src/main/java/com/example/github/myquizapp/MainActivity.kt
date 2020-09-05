@@ -1,5 +1,8 @@
 package com.example.github.myquizapp
 
+import android.app.AlertDialog
+import android.app.Dialog
+import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -32,10 +35,14 @@ class MainActivity : AppCompatActivity(){
     }
 
     fun submit(view : View){
+        AlertDialog.Builder(this)
+            .setMessage("Sex is ${sex} , professional is ${list.toString()}, time is ${SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS")
+                .format(Date())}")
+            .setTitle("Dialog")
+            .setNeutralButton("cancle", null)
+            .create()
+            .show()
 
-        Toast.makeText(this,
-            "Sex is ${sex} , professional is ${list.toString()}, time is ${SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS")
-                .format(Date())}",Toast.LENGTH_SHORT).show()
     }
 
     fun reset(view: View){
